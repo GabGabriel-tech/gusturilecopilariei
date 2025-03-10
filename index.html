@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusturile Copilăriei</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8c8;
+            text-align: center;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+
+        }
+        header img {
+            max-width: 100px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #ffcc00;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-position: inside; 
+            text-align: center; 
+            padding: 0; 
+        }
+     
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.postimg.cc/MZD0mRPJ/LOGO.png" alt="Logo Gusturile Copilăriei" id="logo">
+        <h1>GUSTURILE COPILĂRIEI</h1>
+        <p>Bucuria de a retrăi amintirile copilăriei!</p>
+    </header>
+
+    <section id="about">
+        <h2>Despre Noi</h2>
+        <p>Activitatea firmei se concentrează pe oferirea de produse tradiționale ce reînvie gusturile copilăriei.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Adresă:</strong> Str.Octavian Goga nr. 11, Alba Iulia, Județul Alba</p>
+        <p><strong>Telefon:</strong> 0728 516 326</p>
+        <p><strong>Email:</strong> <a href="mailto:contact@gusturilecopilăriei.ro">contact@gusturilecopilăriei.ro</a></p>
+        <p><strong>Website:</strong> <a href="http://www.gusturilecopilăriei.com">www.gusturilecopilăriei.com</a></p>
+    </section>
+
+    <section id="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery">
+            <img src="https://i.postimg.cc/vHbqQbjb/cozonac.jpg" alt="Imagine 1">
+            <img src="https://i.postimg.cc/CxKcqJS2/mamaliga.jpg" alt="Imagine 2">
+            <img src="https://i.postimg.cc/6p1YLRQp/prune.jpg" alt="Imagine 3">
+            <img src="https://i.postimg.cc/MGC5gSVk/papanasi.jpg" alt="Imagine 4">
+            <img src="https://i.postimg.cc/ZR6HSMxW/sarmale.jpg" alt="Imagine 5">
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Servicii</h2>
+        <ul>
+            <li>Produse tradiționale de casă</li>
+            <li>Rețete autentice</li>
+            <li>Livrare rapidă</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gusturile Copilăriei. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    alert("Ai selectat " + this.alt);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
